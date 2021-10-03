@@ -21,7 +21,7 @@ public class Nomina extends javax.swing.JFrame {
   int l, regemp1, regemp2, ne, caso;
   String nombus;
 
-  String numero, nom, apellidopaterno, apellidomaterno, direccion, curp, sueldo, diaslab, email, antiguedad;
+  String numero, nom, apellidopaterno, apellidomaterno, direccion, curp, sueldo, diaslab, email, antiguedad, puesto;
 
   /** Creates new form Nomina */
   public Nomina() {
@@ -71,6 +71,7 @@ public class Nomina extends javax.swing.JFrame {
     jLabelNumEmp = new javax.swing.JLabel();
     jLabelEmail = new javax.swing.JLabel();
     jLabelAntiguedad = new javax.swing.JLabel();
+    jLabelPuesto = new javax.swing.JLabel();
 
     jLabelSueldoDiario = new javax.swing.JLabel();
     jLabelCURP = new javax.swing.JLabel();
@@ -103,6 +104,7 @@ public class Nomina extends javax.swing.JFrame {
       }
     });
 
+    jButtonCancelar.setBackground(new java.awt.Color(255, 0, 0));
     jButtonCancelar.setText("Cancelar");
     jButtonCancelar.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -130,57 +132,57 @@ public class Nomina extends javax.swing.JFrame {
 
     jLabelAntiguedad.setText("Años de antiguedad:");
 
+    jLabelPuesto.setText("Puesto:");
+
     javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
     jDialog1.getContentPane().setLayout(jDialog1Layout);
-    jDialog1Layout
-        .setHorizontalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabelNumEmp).addComponent(jLabelNombre).addComponent(jLabelEmail)
-                    .addComponent(jLabelAntiguedad).addComponent(jLabelApellidopaterno)
-                    .addComponent(jLabelApellidomaterno).addComponent(jLabelDireccion).addComponent(jLabelCURP)
-                    .addComponent(jLabelSueldoDiario).addComponent(jLabelDiasLab).addComponent(jLabelSueldoTotal))
-                .addGap(6, 6, 6)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+    jDialog1Layout.setHorizontalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
+            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jLabelNumEmp).addComponent(jLabelNombre).addComponent(jLabelEmail)
+                .addComponent(jLabelAntiguedad).addComponent(jLabelPuesto).addComponent(jLabelApellidopaterno)
+                .addComponent(jLabelApellidomaterno).addComponent(jLabelDireccion).addComponent(jLabelCURP)
+                .addComponent(jLabelSueldoDiario).addComponent(jLabelDiasLab).addComponent(jLabelSueldoTotal))
+            .addGap(6, 6, 6)
+            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 383,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 383,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldNumEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 104,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldNumEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 104,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 300,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 300,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addComponent(jTextFieldAntiguedad, javax.swing.GroupLayout.PREFERRED_SIZE, 21,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jTextFieldAntiguedad, javax.swing.GroupLayout.PREFERRED_SIZE, 21,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                    .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jTextFieldCURP, javax.swing.GroupLayout.Alignment.LEADING,
-                            javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-                .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
-                jDialog1Layout.createSequentialGroup().addContainerGap(108, Short.MAX_VALUE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 153,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(70, 70, 70).addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115,
-                        javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(98, 98, 98)));
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldCURP, javax.swing.GroupLayout.Alignment.LEADING,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+            .addContainerGap())
+        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
+            .addContainerGap(108, Short.MAX_VALUE)
+            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(70, 70, 70).addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115,
+                javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(98, 98, 98)));
     jDialog1Layout.setVerticalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -240,6 +242,9 @@ public class Nomina extends javax.swing.JFrame {
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+
+                .addComponent(jLabelPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 14,
+                    javax.swing.GroupLayout.PREFERRED_SIZE)
 
                 .addComponent(jLabelSueldoTotal).addComponent(jTextFieldSueldoTotal,
                     javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
@@ -364,6 +369,7 @@ public class Nomina extends javax.swing.JFrame {
     jTextArea1.setVisible(false);
     jDialog1.setLocation(400, 200);
     jDialog1.setTitle("Altas");
+    jButton1.setBackground(new java.awt.Color(153, 204, 255));
     jButton1.setText("Guardar");
 
     jTextFieldNumEmp.setText("");
@@ -626,7 +632,7 @@ public class Nomina extends javax.swing.JFrame {
      */
     if (!archivo.exists()) {
       trabajador = new Registros();
-      jOptionPane1.showMessageDialog(null, "Se ha creado una nómina nueva");
+      jOptionPane1.showMessageDialog(null, "BIENVENIDO \n Se ha creado una nómina nueva");
     } else {
       try {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("nomina.txt"));
@@ -663,8 +669,10 @@ public class Nomina extends javax.swing.JFrame {
    * se activa cuando "Buscar siguiente" devuelve "No existen coincidencias"
    */
   public void buscar() {
-    nombus = jOptionPane1.showInputDialog("Escriba el nombre a buscar: ");
-    regemp1 = trabajador.buscar(nombus, 0);
+    nombus = jOptionPane1.showInputDialog("Escriba el numero de trabajador a buscar: ");
+    int numeroe = Integer.parseInt(nombus);
+
+    regemp1 = trabajador.buscarParaCam(numeroe);
 
     l = trabajador.longitud();
     if (l == 0)
@@ -733,6 +741,7 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JLabel jLabelSueldoTotal;
   private javax.swing.JLabel jLabelEmail;
   private javax.swing.JLabel jLabelAntiguedad;
+  private javax.swing.JLabel jLabelPuesto;
   private javax.swing.JMenuItem jMenuItemAltas;
   private javax.swing.JMenuItem jMenuItemBajas;
   private javax.swing.JMenuItem jMenuItemBuscar;
