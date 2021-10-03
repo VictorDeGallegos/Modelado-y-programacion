@@ -40,6 +40,7 @@ public class Nomina extends javax.swing.JFrame {
     jLabelInvestigador.setVisible(false);
     jLabelSNI.setVisible(false);
     jComboBoxNivel.setVisible(false);
+    jTextFieldSNI.setVisible(false);
 
     abrirArchivo();
 
@@ -71,6 +72,7 @@ public class Nomina extends javax.swing.JFrame {
     jTextFieldAntiguedad = new javax.swing.JTextField();
     jPanelInvestigador = new javax.swing.JPanel();
     jComboBoxNivel = new javax.swing.JComboBox<>();
+    jTextFieldSNI = new javax.swing.JTextField();
     jLabelSNI = new javax.swing.JLabel();
     jLabelFacultad = new javax.swing.JLabel();
     jLabelInvestigador = new javax.swing.JLabel();
@@ -106,7 +108,7 @@ public class Nomina extends javax.swing.JFrame {
     aboutMenuItem = new javax.swing.JMenuItem();
 
     // Tamano de la tabla
-    jDialog1.setMinimumSize(new java.awt.Dimension(900, 700));
+    jDialog1.setMinimumSize(new java.awt.Dimension(1040, 700));
     jDialog1.setModal(true);
     jDialog1.setName(""); // NOI18N
 
@@ -147,6 +149,15 @@ public class Nomina extends javax.swing.JFrame {
     jLabelAntiguedad.setText("Años de antiguedad:");
 
     jLabelPuesto.setText("Puesto:");
+
+    jTextFieldSNI.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldSNIActionPerformed(evt);
+      }
+
+      private void jTextFieldSNIActionPerformed(ActionEvent evt) {
+      }
+    });
 
     jLabelSNI.setText("Nivel de SNI: ");
 
@@ -197,23 +208,27 @@ public class Nomina extends javax.swing.JFrame {
                         javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                         javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelSNI)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jLabelFacultad)
-                    .addComponent(jComboBoxFacultad, javax.swing.GroupLayout.PREFERRED_SIZE,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jTextFieldSNI,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelFacultad)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jComboBoxFacultad,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap()));
     jPanelInvestigadorLayout.setVerticalGroup(jPanelInvestigadorLayout
         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addGap(10, 10, 10).addComponent(jLabelFacultad)
-            .addComponent(jComboBoxFacultad, javax.swing.GroupLayout.PREFERRED_SIZE,
-                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addGap(10, 10, 10)
+            .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabelFacultad).addComponent(jComboBoxFacultad, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabelInvestigador).addComponent(jComboBoxNivel, javax.swing.GroupLayout.PREFERRED_SIZE,
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-
-            .addComponent(jLabelSNI)
-
+            .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabelSNI).addComponent(jTextFieldSNI, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addContainerGap()));
 
     jComboBoxPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(
@@ -236,6 +251,7 @@ public class Nomina extends javax.swing.JFrame {
             jLabelInvestigador.setVisible(true);
             jLabelSNI.setVisible(true);
             jComboBoxNivel.setVisible(true);
+            jTextFieldSNI.setVisible(true);
             break;
 
           case 1:
@@ -903,6 +919,7 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JPanel jPanelInvestigador;
 
   private javax.swing.JTextField jTextFieldCURP;
+  private javax.swing.JTextField jTextFieldSNI;
   private javax.swing.JTextField jTextFieldSueldoD;
   private javax.swing.JTextField jTextFieldSueldoTotal;
   private javax.swing.JTextField jTextFieldEmail;
