@@ -292,9 +292,7 @@ public class Nomina extends javax.swing.JFrame {
     jComboBoxNivelProfesor
         .setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "Seleccionar" }));
     jComboBoxNivelProfesor.setSelectedIndex(3);
-
     jLabelTitulo.setText("Titulo");
-
     // Panel profesor
     javax.swing.GroupLayout jPanelProfesorLayout = new javax.swing.GroupLayout(jPanelProfesor);
     jPanelProfesor.setLayout(jPanelProfesorLayout);
