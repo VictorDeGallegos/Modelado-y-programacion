@@ -38,6 +38,7 @@ public class Nomina extends javax.swing.JFrame {
     jLabelFacultad.setVisible(false);
     jComboBoxFacultad.setVisible(false);
     jLabelInvestigador.setVisible(false);
+    jLabelSNI.setVisible(false);
     jComboBoxNivel.setVisible(false);
 
     abrirArchivo();
@@ -70,6 +71,7 @@ public class Nomina extends javax.swing.JFrame {
     jTextFieldAntiguedad = new javax.swing.JTextField();
     jPanelInvestigador = new javax.swing.JPanel();
     jComboBoxNivel = new javax.swing.JComboBox<>();
+    jLabelSNI = new javax.swing.JLabel();
     jLabelFacultad = new javax.swing.JLabel();
     jLabelInvestigador = new javax.swing.JLabel();
     jComboBoxFacultad = new javax.swing.JComboBox<>();
@@ -104,7 +106,7 @@ public class Nomina extends javax.swing.JFrame {
     aboutMenuItem = new javax.swing.JMenuItem();
 
     // Tamano de la tabla
-    jDialog1.setMinimumSize(new java.awt.Dimension(844, 700));
+    jDialog1.setMinimumSize(new java.awt.Dimension(900, 700));
     jDialog1.setModal(true);
     jDialog1.setName(""); // NOI18N
 
@@ -145,6 +147,8 @@ public class Nomina extends javax.swing.JFrame {
     jLabelAntiguedad.setText("Años de antiguedad:");
 
     jLabelPuesto.setText("Puesto:");
+
+    jLabelSNI.setText("Nivel de SNI: ");
 
     jLabelFacultad.setText("Facultad a la que pertenece: ");
 
@@ -189,12 +193,13 @@ public class Nomina extends javax.swing.JFrame {
             .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelInvestigador)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                    .addComponent(jComboBoxNivel, javax.swing.GroupLayout.PREFERRED_SIZE,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelFacultad).addComponent(
-                    jComboBoxFacultad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jComboBoxNivel,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelSNI)
+                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jLabelFacultad)
+                    .addComponent(jComboBoxFacultad, javax.swing.GroupLayout.PREFERRED_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addContainerGap()));
     jPanelInvestigadorLayout.setVerticalGroup(jPanelInvestigadorLayout
         .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,6 +210,9 @@ public class Nomina extends javax.swing.JFrame {
             .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabelInvestigador).addComponent(jComboBoxNivel, javax.swing.GroupLayout.PREFERRED_SIZE,
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+
+            .addComponent(jLabelSNI)
 
             .addContainerGap()));
 
@@ -226,6 +234,7 @@ public class Nomina extends javax.swing.JFrame {
             jLabelFacultad.setVisible(true);
             jComboBoxFacultad.setVisible(true);
             jLabelInvestigador.setVisible(true);
+            jLabelSNI.setVisible(true);
             jComboBoxNivel.setVisible(true);
             break;
 
@@ -872,6 +881,7 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JLabel jLabelFacultad;
   private javax.swing.JLabel jLabelAntiguedad;
   private javax.swing.JLabel jLabelPuesto;
+  private javax.swing.JLabel jLabelSNI;
   private javax.swing.JMenuItem jMenuItemAltas;
   private javax.swing.JMenuItem jMenuItemBajas;
   private javax.swing.JMenuItem jMenuItemBuscar;
