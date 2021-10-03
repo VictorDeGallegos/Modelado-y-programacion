@@ -42,6 +42,18 @@ public class Nomina extends javax.swing.JFrame {
     jComboBoxNivel.setVisible(false);
     jTextFieldSNI.setVisible(false);
 
+    // Profesor
+    jLabelFacultadPertenencia.setVisible(false);
+    jComboBoxFacultadPertenencia.setVisible(false);
+    jLabelClaseImpartida.setVisible(false);
+    jTextFieldClaseImpartida.setVisible(false);
+    jLabelHorarioClase.setVisible(false);
+    jTextFieldHorarioClase.setVisible(false);
+    jLabelNivelProfesor.setVisible(false);
+    jComboBoxNivelProfesor.setVisible(false);
+    jLabelTitulo.setVisible(false);
+    jTextFieldTitulo.setVisible(false);
+
     abrirArchivo();
 
   }
@@ -77,6 +89,17 @@ public class Nomina extends javax.swing.JFrame {
     jLabelFacultad = new javax.swing.JLabel();
     jLabelInvestigador = new javax.swing.JLabel();
     jComboBoxFacultad = new javax.swing.JComboBox<>();
+    jPanelProfesor = new javax.swing.JPanel();
+    jTextFieldHorarioClase = new javax.swing.JTextField();
+    jLabelHorarioClase = new javax.swing.JLabel();
+    jLabelFacultadPertenencia = new javax.swing.JLabel();
+    jLabelClaseImpartida = new javax.swing.JLabel();
+    jComboBoxFacultadPertenencia = new javax.swing.JComboBox<>();
+    jTextFieldClaseImpartida = new javax.swing.JTextField();
+    jLabelNivelProfesor = new javax.swing.JLabel();
+    jComboBoxNivelProfesor = new javax.swing.JComboBox<>();
+    jLabelTitulo = new javax.swing.JLabel();
+    jTextFieldTitulo = new javax.swing.JTextField();
     jButton1 = new javax.swing.JButton();
     jButtonCancelar = new javax.swing.JButton();
     jLabelDiasLab = new javax.swing.JLabel();
@@ -108,7 +131,7 @@ public class Nomina extends javax.swing.JFrame {
     aboutMenuItem = new javax.swing.JMenuItem();
 
     // Tamano de la tabla
-    jDialog1.setMinimumSize(new java.awt.Dimension(1040, 700));
+    jDialog1.setMinimumSize(new java.awt.Dimension(800, 700));
     jDialog1.setModal(true);
     jDialog1.setName(""); // NOI18N
 
@@ -195,7 +218,7 @@ public class Nomina extends javax.swing.JFrame {
       private void jComboBoxNivelActionPerformed(java.awt.event.ActionEvent evt) {
       }
     });
-
+    // Panel Investigador
     javax.swing.GroupLayout jPanelInvestigadorLayout = new javax.swing.GroupLayout(jPanelInvestigador);
     jPanelInvestigador.setLayout(jPanelInvestigadorLayout);
     jPanelInvestigadorLayout.setHorizontalGroup(jPanelInvestigadorLayout
@@ -231,6 +254,100 @@ public class Nomina extends javax.swing.JFrame {
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addContainerGap()));
 
+    jTextFieldHorarioClase.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jTextFieldHorarioClaseActionPerformed(evt);
+      }
+
+      private void jTextFieldHorarioClaseActionPerformed(ActionEvent evt) {
+      }
+    });
+
+    jLabelHorarioClase.setText("Horario de la clase:");
+
+    jLabelFacultadPertenencia.setText("Facultad donde imparte clase: ");
+
+    jLabelClaseImpartida.setText("Clase que imparte:");
+
+    jComboBoxFacultadPertenencia.setModel(new javax.swing.DefaultComboBoxModel<>(
+        new String[] { "Facultad de Arquitectura", "Facultad de Artes y Diseño", "Facultad de Ciencias",
+            "Facultad de Ciencias Políticas y Sociales", "Facultad de Contaduría y Administración",
+            "Facultad de Derecho", "Facultad de Economía", "Facultad de Estudios Superiores (FES) Acatlán",
+            "Facultad de Estudios Superiores (FES) Aragón", "Facultad de Estudios Superiores (FES) Cuautitlán",
+            "Facultad de Estudios Superiores (FES) Iztacala", "Facultad de Estudios Superiores (FES) Zaragoza",
+            "Facultad de Filosofía y Letras", "Facultad de Ingeniería", "Facultad de Medicina",
+            "Facultad de Medicina Veterinaria y Zootecnia", "Facultad de Música", "Facultad de Odontología",
+            "Facultad de Psicología", "Facultad de Química", "Seleccionar" }));
+    jComboBoxFacultadPertenencia.setSelectedIndex(20);
+    jComboBoxFacultadPertenencia.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBoxFacultadPertenenciaActionPerformed(evt);
+      }
+
+      private void jComboBoxFacultadPertenenciaActionPerformed(ActionEvent evt) {
+      }
+    });
+    jLabelNivelProfesor.setText("Nivel de profesor");
+
+    jComboBoxNivelProfesor
+        .setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "Seleccionar" }));
+    jComboBoxNivelProfesor.setSelectedIndex(3);
+
+    jLabelTitulo.setText("Titulo");
+
+    // Panel profesor
+    javax.swing.GroupLayout jPanelProfesorLayout = new javax.swing.GroupLayout(jPanelProfesor);
+    jPanelProfesor.setLayout(jPanelProfesorLayout);
+    jPanelProfesorLayout.setHorizontalGroup(jPanelProfesorLayout
+        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanelProfesorLayout.createSequentialGroup().addContainerGap().addGroup(jPanelProfesorLayout
+            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addComponent(jLabelFacultadPertenencia)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBoxFacultadPertenencia, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addComponent(jLabelClaseImpartida)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldClaseImpartida))
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addComponent(jLabelHorarioClase)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextFieldHorarioClase, javax.swing.GroupLayout.PREFERRED_SIZE, 159,
+                    javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addComponent(jLabelNivelProfesor)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jComboBoxNivelProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addComponent(jLabelTitulo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addComponent(jTextFieldTitulo)))
+            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+    jPanelProfesorLayout
+        .setVerticalGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelProfesorLayout.createSequentialGroup().addContainerGap()
+                .addGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelFacultadPertenencia).addComponent(jComboBoxFacultadPertenencia,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelClaseImpartida).addComponent(jTextFieldClaseImpartida,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelHorarioClase).addComponent(jTextFieldHorarioClase,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelNivelProfesor).addComponent(jComboBoxNivelProfesor,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelProfesorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelTitulo).addComponent(jTextFieldTitulo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+
     jComboBoxPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(
         new String[] { "Investigador", "Profesor", "Ayudante", "Administrativo", "Seleccionar" }));
     jComboBoxPuesto.setSelectedIndex(4);
@@ -246,6 +363,7 @@ public class Nomina extends javax.swing.JFrame {
           case 0:
 
             jPanelInvestigador.setVisible(true);
+            jPanelProfesor.setVisible(false);
             jLabelFacultad.setVisible(true);
             jComboBoxFacultad.setVisible(true);
             jLabelInvestigador.setVisible(true);
@@ -255,18 +373,36 @@ public class Nomina extends javax.swing.JFrame {
             break;
 
           case 1:
-
+            jPanelProfesor.setVisible(true);
             jPanelInvestigador.setVisible(false);
+            jLabelFacultadPertenencia.setVisible(true);
+            jComboBoxFacultadPertenencia.setVisible(true);
+            jLabelClaseImpartida.setVisible(true);
+            jTextFieldClaseImpartida.setVisible(true);
+            jLabelHorarioClase.setVisible(true);
+            jTextFieldHorarioClase.setVisible(true);
+            jLabelNivelProfesor.setVisible(true);
+            jComboBoxNivelProfesor.setVisible(true);
+            jLabelTitulo.setVisible(true);
+            jTextFieldTitulo.setVisible(true);
             break;
 
           case 2:
 
             jPanelInvestigador.setVisible(false);
+            jPanelProfesor.setVisible(false);
+            break;
+
+          case 3:
+
+            jPanelInvestigador.setVisible(false);
+            jPanelProfesor.setVisible(false);
             break;
 
           case 4:
 
             jPanelInvestigador.setVisible(false);
+            jPanelProfesor.setVisible(false);
             break;
         }
       }
@@ -292,6 +428,9 @@ public class Nomina extends javax.swing.JFrame {
                         javax.swing.GroupLayout.PREFERRED_SIZE)
 
                     .addComponent(jPanelInvestigador, javax.swing.GroupLayout.PREFERRED_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                    .addComponent(jPanelProfesor, javax.swing.GroupLayout.PREFERRED_SIZE,
                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 
                     .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
@@ -392,14 +531,17 @@ public class Nomina extends javax.swing.JFrame {
 
                 .addComponent(jLabelPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 14,
                     javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabelSueldoTotal)
-                .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.PREFERRED_SIZE,
-                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelSueldoTotal).addComponent(jTextFieldSueldoTotal,
+                    javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                    javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jComboBoxPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                 javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jPanelInvestigador, javax.swing.GroupLayout.PREFERRED_SIZE,
                 javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGap(18, 18, 18)
+            .addComponent(jPanelProfesor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 
                 .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 42,
@@ -437,7 +579,7 @@ public class Nomina extends javax.swing.JFrame {
 
     registroMenu.setText("Registro");
 
-    jMenuItemAltas.setText("Altas");
+    jMenuItemAltas.setText("Dar de Alta");
     jMenuItemAltas.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jMenuItemAltasActionPerformed(evt);
@@ -445,7 +587,7 @@ public class Nomina extends javax.swing.JFrame {
     });
     registroMenu.add(jMenuItemAltas);
 
-    jMenuItemBajas.setText("Bajas");
+    jMenuItemBajas.setText("Dar de Baja");
     jMenuItemBajas.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jMenuItemBajasActionPerformed(evt);
@@ -453,7 +595,7 @@ public class Nomina extends javax.swing.JFrame {
     });
     registroMenu.add(jMenuItemBajas);
 
-    jMenuItemCambios.setText("Cambios");
+    jMenuItemCambios.setText("Cambios/Modificaciones");
     jMenuItemCambios.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         jMenuItemCambiosActionPerformed(evt);
@@ -601,7 +743,7 @@ public class Nomina extends javax.swing.JFrame {
           + sueldodia + "  Sueldo total: " + sueldotot + "  Email: " + trabajador.registro(i).getEmail()
           + "  Años de antiguedad: " + trabajador.registro(i).getAntiguedad() + "\n");
     }
-    jTextArea1.append("\nRegistros totales: " + l);
+    jTextArea1.append("\nTotal de Trabajadores registrados: " + l);
     jTextArea1.setVisible(true);
   }// GEN-LAST:event_jMenuItemMostrarTodosActionPerformed
 
@@ -619,15 +761,17 @@ public class Nomina extends javax.swing.JFrame {
           + "                      Comprobante de pago"
           + "                                                                               "
           + "                                                        Folio " + (i + 1) + "\n\n");
-      jTextArea1.append("Número de trabajador: " + numeroemp + "  Nombre: " + trabajador.registro(i).getNombre() + " "
+      jTextArea1.append("No. Trabajador: " + numeroemp + "  Nombre: " + trabajador.registro(i).getNombre() + " "
           + trabajador.registro(i).getApellidopaterno() + " " + trabajador.registro(i).getApellidomaterno()
           + "  Direccion: " + trabajador.registro(i).getDireccion() + "  CURP:  " + trabajador.registro(i).getCurp()
           + "\n" + "                   Sueldo por día :  " + sueldodia + "\n" + "                   Días laborados: "
-          + diastra + "\n" + "                   Sueldo total:  " + sueldotot + "  Email: "
-          + trabajador.registro(i).getEmail() + "  Años de antiguedad: " + trabajador.registro(i).getAntiguedad() + "\n"
+          + diastra + "\n" + "                   Sueldo total:  " + sueldotot + "\n"
+          + "                   Años de antiguedad: " + trabajador.registro(i).getAntiguedad() + "\n" + "\n"
+          + "                   Email: " + trabajador.registro(i).getEmail() + "\n"
           + "                                                     "
           + "                                                     "
-          + "                   Firma de recibido:______________________\n"
+          + "                   Firma de recibido:____________________________________________\n"
+          + "------------------------------------------------------"
           + "------------------------------------------------------"
           + "------------------------------------------------------"
           + "------------------------------------------------------");
@@ -880,10 +1024,13 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JButton jButton1;
   private javax.swing.JButton jButtonCancelar;
   private javax.swing.JComboBox<String> jComboBoxFacultad;
+  private javax.swing.JComboBox<String> jComboBoxFacultadPertenencia;
   private javax.swing.JComboBox<String> jComboBoxNivel;
+  private javax.swing.JComboBox<String> jComboBoxNivelProfesor;
   private javax.swing.JComboBox<String> jComboBoxPuesto;
   private javax.swing.JDialog jDialog1;
   private javax.swing.JLabel jLabelDiasLab;
+  private javax.swing.JLabel jLabelNivelProfesor;
   private javax.swing.JLabel jLabelNombre;
   private javax.swing.JLabel jLabelApellidopaterno;
   private javax.swing.JLabel jLabelApellidomaterno;
@@ -891,10 +1038,12 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JLabel jLabelNumEmp;
 
   private javax.swing.JLabel jLabelCURP;
+  private javax.swing.JLabel jLabelClaseImpartida;
   private javax.swing.JLabel jLabelSueldoDiario;
   private javax.swing.JLabel jLabelSueldoTotal;
   private javax.swing.JLabel jLabelEmail;
   private javax.swing.JLabel jLabelFacultad;
+  private javax.swing.JLabel jLabelFacultadPertenencia;
   private javax.swing.JLabel jLabelAntiguedad;
   private javax.swing.JLabel jLabelPuesto;
   private javax.swing.JLabel jLabelSNI;
@@ -915,15 +1064,21 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JTextField jTextFieldDireccion;
   private javax.swing.JTextField jTextFieldNumEmp;
 
+  private javax.swing.JLabel jLabelHorarioClase;
+  private javax.swing.JLabel jLabelTitulo;
   private javax.swing.JLabel jLabelInvestigador;
   private javax.swing.JPanel jPanelInvestigador;
+  private javax.swing.JPanel jPanelProfesor;
 
   private javax.swing.JTextField jTextFieldCURP;
+  private javax.swing.JTextField jTextFieldClaseImpartida;
   private javax.swing.JTextField jTextFieldSNI;
   private javax.swing.JTextField jTextFieldSueldoD;
   private javax.swing.JTextField jTextFieldSueldoTotal;
   private javax.swing.JTextField jTextFieldEmail;
+  private javax.swing.JTextField jTextFieldHorarioClase;
   private javax.swing.JTextField jTextFieldAntiguedad;
+  private javax.swing.JTextField jTextFieldTitulo;
   private javax.swing.JMenuBar menuBar;
   private javax.swing.JMenu registroMenu;
   // End of variables declaration//GEN-END:variables
