@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,6 +34,10 @@ public class Nomina extends javax.swing.JFrame {
     jLabelSueldoTotal.setVisible(false);
     jTextFieldSueldoTotal.setVisible(false);
 
+    // Investigador
+    jLabelInvestigador.setVisible(false);
+    jComboBoxNivel.setVisible(false);
+
     abrirArchivo();
 
   }
@@ -61,6 +66,9 @@ public class Nomina extends javax.swing.JFrame {
     jTextFieldNumEmp = new javax.swing.JTextField();
     jTextFieldEmail = new javax.swing.JTextField();
     jTextFieldAntiguedad = new javax.swing.JTextField();
+    jPanelInvestigador = new javax.swing.JPanel();
+    jComboBoxNivel = new javax.swing.JComboBox<>();
+    jLabelInvestigador = new javax.swing.JLabel();
     jButton1 = new javax.swing.JButton();
     jButtonCancelar = new javax.swing.JButton();
     jLabelDiasLab = new javax.swing.JLabel();
@@ -92,7 +100,7 @@ public class Nomina extends javax.swing.JFrame {
     aboutMenuItem = new javax.swing.JMenuItem();
 
     // Tamano de la tabla
-    jDialog1.setMinimumSize(new java.awt.Dimension(844, 600));
+    jDialog1.setMinimumSize(new java.awt.Dimension(844, 700));
     jDialog1.setModal(true);
     jDialog1.setName(""); // NOI18N
 
@@ -134,9 +142,83 @@ public class Nomina extends javax.swing.JFrame {
 
     jLabelPuesto.setText("Puesto:");
 
+    jLabelInvestigador.setText("Nivel de investigador: ");
+
+    jPanelInvestigador.setMaximumSize(new java.awt.Dimension(500, 500));
+
+    jComboBoxNivel.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "A", "B", "C", "Seleccionar" }));
+    jComboBoxNivel.setSelectedIndex(3);
+    jComboBoxNivel.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBoxNivelActionPerformed(evt);
+      }
+
+      private void jComboBoxNivelActionPerformed(java.awt.event.ActionEvent evt) {
+      }
+    });
+
+    javax.swing.GroupLayout jPanelInvestigadorLayout = new javax.swing.GroupLayout(jPanelInvestigador);
+    jPanelInvestigador.setLayout(jPanelInvestigadorLayout);
+    jPanelInvestigadorLayout
+        .setHorizontalGroup(
+            jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanelInvestigadorLayout.createSequentialGroup()
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addComponent(jLabelInvestigador)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jComboBoxNivel, javax.swing.GroupLayout.PREFERRED_SIZE,
+                                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanelInvestigadorLayout.createSequentialGroup()
+
+                            .addContainerGap()))));
+    jPanelInvestigadorLayout.setVerticalGroup(jPanelInvestigadorLayout
+        .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        .addGroup(jPanelInvestigadorLayout.createSequentialGroup().addGap(10, 10, 10)
+
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addGroup(jPanelInvestigadorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(jLabelInvestigador).addComponent(jComboBoxNivel, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+
+            .addContainerGap()));
+
     jComboBoxPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(
         new String[] { "Investigador", "Profesor", "Ayudante", "Administrativo", "Seleccionar" }));
     jComboBoxPuesto.setSelectedIndex(4);
+    jComboBoxPuesto.addActionListener(new java.awt.event.ActionListener() {
+      public void actionPerformed(java.awt.event.ActionEvent evt) {
+        jComboBoxPuestoActionPerformed(evt);
+      }
+
+      private void jComboBoxPuestoActionPerformed(java.awt.event.ActionEvent evt) {
+        int opcion = jComboBoxPuesto.getSelectedIndex();
+
+        switch (opcion) {
+          case 0:
+
+            jPanelInvestigador.setVisible(true);
+            jLabelInvestigador.setVisible(true);
+            jComboBoxNivel.setVisible(true);
+            break;
+
+          case 1:
+
+            jPanelInvestigador.setVisible(false);
+            break;
+
+          case 2:
+
+            jPanelInvestigador.setVisible(false);
+            break;
+
+          case 4:
+
+            jPanelInvestigador.setVisible(false);
+            break;
+        }
+      }
+    });
 
     javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
     jDialog1.getContentPane().setLayout(jDialog1Layout);
@@ -156,6 +238,9 @@ public class Nomina extends javax.swing.JFrame {
 
                     .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
                         javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                    .addComponent(jPanelInvestigador, javax.swing.GroupLayout.PREFERRED_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
 
                     .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
                         javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -229,9 +314,9 @@ public class Nomina extends javax.swing.JFrame {
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabelSueldoDiario)
-                .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE,
-                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelSueldoDiario).addComponent(jTextFieldSueldoD,
+                    javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                    javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(7, 7, 7)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabelDiasLab).addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -255,12 +340,15 @@ public class Nomina extends javax.swing.JFrame {
 
                 .addComponent(jLabelPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 14,
                     javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(jLabelSueldoTotal).addComponent(jTextFieldSueldoTotal,
-                    javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                    javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelSueldoTotal)
+                .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jComboBoxPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                 javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(18, 18, 18).addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanelInvestigador, javax.swing.GroupLayout.PREFERRED_SIZE,
+                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGap(18, 18, 18)
+            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 
                 .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 42,
                     javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -739,6 +827,7 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JMenuItem exitMenuItem;
   private javax.swing.JButton jButton1;
   private javax.swing.JButton jButtonCancelar;
+  private javax.swing.JComboBox<String> jComboBoxNivel;
   private javax.swing.JComboBox<String> jComboBoxPuesto;
   private javax.swing.JDialog jDialog1;
   private javax.swing.JLabel jLabelDiasLab;
@@ -770,6 +859,9 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JTextField jTextFieldApellidomaterno;
   private javax.swing.JTextField jTextFieldDireccion;
   private javax.swing.JTextField jTextFieldNumEmp;
+
+  private javax.swing.JLabel jLabelInvestigador;
+  private javax.swing.JPanel jPanelInvestigador;
 
   private javax.swing.JTextField jTextFieldCURP;
   private javax.swing.JTextField jTextFieldSueldoD;
