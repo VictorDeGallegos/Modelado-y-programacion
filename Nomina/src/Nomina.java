@@ -72,7 +72,7 @@ public class Nomina extends javax.swing.JFrame {
     jLabelEmail = new javax.swing.JLabel();
     jLabelAntiguedad = new javax.swing.JLabel();
     jLabelPuesto = new javax.swing.JLabel();
-
+    jComboBoxPuesto = new javax.swing.JComboBox<>();
     jLabelSueldoDiario = new javax.swing.JLabel();
     jLabelCURP = new javax.swing.JLabel();
     jScrollPane1 = new javax.swing.JScrollPane();
@@ -92,7 +92,7 @@ public class Nomina extends javax.swing.JFrame {
     aboutMenuItem = new javax.swing.JMenuItem();
 
     // Tamano de la tabla
-    jDialog1.setMinimumSize(new java.awt.Dimension(844, 500));
+    jDialog1.setMinimumSize(new java.awt.Dimension(844, 600));
     jDialog1.setModal(true);
     jDialog1.setName(""); // NOI18N
 
@@ -134,55 +134,65 @@ public class Nomina extends javax.swing.JFrame {
 
     jLabelPuesto.setText("Puesto:");
 
+    jComboBoxPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(
+        new String[] { "Investigador", "Profesor", "Ayudante", "Administrativo", "Seleccionar" }));
+    jComboBoxPuesto.setSelectedIndex(4);
+
     javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
     jDialog1.getContentPane().setLayout(jDialog1Layout);
-    jDialog1Layout.setHorizontalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-        .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
-            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabelNumEmp).addComponent(jLabelNombre).addComponent(jLabelEmail)
-                .addComponent(jLabelAntiguedad).addComponent(jLabelPuesto).addComponent(jLabelApellidopaterno)
-                .addComponent(jLabelApellidomaterno).addComponent(jLabelDireccion).addComponent(jLabelCURP)
-                .addComponent(jLabelSueldoDiario).addComponent(jLabelDiasLab).addComponent(jLabelSueldoTotal))
-            .addGap(6, 6, 6)
-            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+    jDialog1Layout
+        .setHorizontalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
+                .addGroup(jDialog1Layout
+                    .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING).addComponent(jLabelNumEmp)
+                    .addComponent(jLabelNombre).addComponent(jLabelEmail).addComponent(jLabelAntiguedad)
+                    .addComponent(jLabelPuesto).addComponent(jComboBoxPuesto).addComponent(jLabelApellidopaterno)
+                    .addComponent(jLabelApellidomaterno).addComponent(jLabelDireccion).addComponent(jLabelCURP)
+                    .addComponent(jLabelSueldoDiario).addComponent(jLabelDiasLab).addComponent(jLabelSueldoTotal))
+                .addGap(6, 6, 6)
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTextFieldNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldApellidomaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 383,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 383,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldNumEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 104,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldNumEmp, javax.swing.GroupLayout.PREFERRED_SIZE, 104,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE, 52,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 300,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 300,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addComponent(jTextFieldAntiguedad, javax.swing.GroupLayout.PREFERRED_SIZE, 21,
-                    javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextFieldAntiguedad, javax.swing.GroupLayout.PREFERRED_SIZE, 21,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
 
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTextFieldCURP, javax.swing.GroupLayout.Alignment.LEADING,
-                        javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
-            .addContainerGap())
-        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
-            .addContainerGap(108, Short.MAX_VALUE)
-            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 153, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(70, 70, 70).addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115,
-                javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(98, 98, 98)));
+                    .addComponent(jComboBoxPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 20,
+                        javax.swing.GroupLayout.DEFAULT_SIZE)
+
+                    .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jTextFieldSueldoTotal, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jTextFieldCURP, javax.swing.GroupLayout.Alignment.LEADING,
+                            javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
+                jDialog1Layout.createSequentialGroup().addContainerGap(108, Short.MAX_VALUE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 153,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(70, 70, 70).addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 115,
+                        javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(98, 98, 98)));
     jDialog1Layout.setVerticalGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
         .addGroup(jDialog1Layout.createSequentialGroup().addContainerGap()
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -219,9 +229,9 @@ public class Nomina extends javax.swing.JFrame {
                     javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(jLabelSueldoDiario).addComponent(jTextFieldSueldoD,
-                    javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
-                    javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabelSueldoDiario)
+                .addComponent(jTextFieldSueldoD, javax.swing.GroupLayout.PREFERRED_SIZE,
+                    javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGap(7, 7, 7)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                 .addComponent(jLabelDiasLab).addComponent(jTextFieldDias, javax.swing.GroupLayout.PREFERRED_SIZE,
@@ -245,12 +255,13 @@ public class Nomina extends javax.swing.JFrame {
 
                 .addComponent(jLabelPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, 14,
                     javax.swing.GroupLayout.PREFERRED_SIZE)
-
                 .addComponent(jLabelSueldoTotal).addComponent(jTextFieldSueldoTotal,
                     javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                     javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGap(18, 18, 18)
-            .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jComboBoxPuesto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(18, 18, 18).addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+
                 .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 42,
                     javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42,
@@ -728,6 +739,7 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JMenuItem exitMenuItem;
   private javax.swing.JButton jButton1;
   private javax.swing.JButton jButtonCancelar;
+  private javax.swing.JComboBox<String> jComboBoxPuesto;
   private javax.swing.JDialog jDialog1;
   private javax.swing.JLabel jLabelDiasLab;
   private javax.swing.JLabel jLabelNombre;
