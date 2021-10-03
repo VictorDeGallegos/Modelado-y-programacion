@@ -632,7 +632,7 @@ public class Nomina extends javax.swing.JFrame {
      */
     if (!archivo.exists()) {
       trabajador = new Registros();
-      jOptionPane1.showMessageDialog(null, "Se ha creado una nómina nueva");
+      jOptionPane1.showMessageDialog(null, "BIENVENIDO \n Se ha creado una nómina nueva");
     } else {
       try {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("nomina.txt"));

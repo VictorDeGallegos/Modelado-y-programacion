@@ -3,14 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import javax.swing.JOptionPane;
 
 /**
  *
- * @author Gallegos Mota Victor Hugo, Carlos Cruz Rangel
- * 
- *         Esta es la interfaz (GUI) que será mostrada en pantalla para la el
- *         acceso o loggin de los usuarios
+ * @author hp
  */
 public class FormLogin extends javax.swing.JFrame {
 
@@ -51,6 +50,8 @@ public class FormLogin extends javax.swing.JFrame {
 
     lblContraseña.setText("Contraseña:");
 
+    txtUsuario.setEditable(false);
+    txtUsuario.setText("Admin");
     txtUsuario.addActionListener(new java.awt.event.ActionListener() {
       public void actionPerformed(java.awt.event.ActionEvent evt) {
         txtUsuarioActionPerformed(evt);
@@ -106,16 +107,36 @@ public class FormLogin extends javax.swing.JFrame {
 
   private void btnEntrarMouseClicked(java.awt.event.MouseEvent evt) {
     String Usuario = "Admin";
-    String Contraseña = "123";
+    String Contraseña = "password";
+    String generatedPassword = null;
+    try {
+      // Creamos la instancia MessageDigest en funcion SHA-256
+      MessageDigest md = MessageDigest.getInstance("SHA-256");
+      // Agregar bytes de contraseña
+      md.update(Contraseña.getBytes());
+      // Obtener los bytes del hash
+      byte[] bytes = md.digest();
+      // Estos bytes[] tienen bytes en formato decimal;
+      // Los convertimos a formato hexadecimal
+      StringBuilder sb = new StringBuilder();
+      for (int i = 0; i < bytes.length; i++) {
+        sb.append(Integer.toString((bytes[i] & 0xff) + 0x100, 16).substring(1));
+      }
+      // Obtenemos la contraseña hash completa en formato hexadecimal
+      generatedPassword = sb.toString();
+    } catch (NoSuchAlgorithmException e) {
+      e.printStackTrace();
+    }
+    System.out.println("Contraseña encriptada:" + generatedPassword);
 
     String Pass = new String(Password.getPassword());
 
-    if (txtUsuario.getText().equals(Usuario) && Pass.equals(Contraseña)) {
+    if (txtUsuario.getText().equalsIgnoreCase(Usuario) && Pass.equals(Contraseña)) {
       Nomina Login = new Nomina();
       Login.setVisible(true);
       dispose();
     } else {
-      JOptionPane.showMessageDialog(this, "Usuario o Contraseña INCORRECTAS");
+      JOptionPane.showMessageDialog(this, "Contraseña INCORRECTA \n vuelve a intentarlo");
     }
   }
 
