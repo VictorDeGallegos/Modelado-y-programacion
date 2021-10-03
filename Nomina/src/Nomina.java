@@ -931,7 +931,7 @@ public class Nomina extends javax.swing.JFrame {
         ObjectInputStream ois = new ObjectInputStream(new FileInputStream("nomina.txt"));
         trabajador = (Registros) ois.readObject();
         ois.close();
-        jOptionPane1.showMessageDialog(null, "Se cargó la nómina con éxito");
+        jOptionPane1.showMessageDialog(null, "BIENVENIDO DE NUEVO \n Se cargó la nómina con éxito");
       } catch (IOException e) {
         jOptionPane1.showMessageDialog(null, "Error: " + e.getMessage());
       } catch (ClassNotFoundException e) {
