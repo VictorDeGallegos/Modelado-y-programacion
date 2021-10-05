@@ -10,32 +10,44 @@ Repositorio de prácticas y ejercicios de La asignatura de Modelado y programaci
 
 ### Funcionamiento ⚙ 
 
+Para iniciar el programa debe ejecutarse la clase `FormLogin.java` Esto abrira la interfaz (GUI) que mostrara en pantalla el login de acceso donde deberan escribir la contraseña **password** 
+
+```
+Usuario: Admin
+Contraseña: password
+```
+
+Una vez introducida la contraseña y presionando el boton de *entrar* si es incorrecta lanzara un mensaje de "Contraseña incorrecta vuelva a intentarlo" y no nos permitira ingresar hasta que sea correcta, si la contraseña es correcta esta se encriptara y se mostrara en consola (aparecera en funcion `SHA-256`)
+
+```bash
+Contraseña encriptada: 5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8
+```
+
 Al iniciar el programa se cargara el archivo "nomina.txt". Si el archivo no existe, se creara uno nuevo.
 
 La Interfaz principal cuenta con 3 menus: 
 
-- Archivo :
+- **Archivo** :
   - Guardar: Se debe utilizar esta opción para guardar los cambios realizados durante el uso de la aplicación y asi lograr hacer el programa persistente. Si no se usa esta opción los cambios no serán guardados.
-  - Salir: Cierra la aplicación y guardar los cambios.
+  - Salir: Cierra la aplicación y guarda los ultimos cambios.
 
-- Registro :
-  - Altas - Permite dar de alta o registrar a un nuevo trabajador y tener un nuevo registro (con toda la info que todos los trabajadores deben registrar)
-  - Bajas - Permite dar de baja un trabajador y asi eliminar un archivo existente.
-  - Cambios - Permite modificar un archivo existente.
-  - Buscar - Busca los registros que coincidan con el criterio de búsqueda especificado (nombre del trabajador). Se habilita la opción "Buscar siguiente" en caso de que existan más de un registro que coincida con el valor proporcionado.
+- **Registro** :
+  - Dar de alta - Permite dar de alta o registrar a un nuevo trabajador y tener un nuevo registro (con toda la info que todos los trabajadores deben registrar)
+  - Dar de baja - Permite dar de baja un trabajador y asi eliminar un archivo existente.
+  - Cambios/Modificaciones - Permite editar o modificar un archivo existente ingresando el (numero de trabajador) que se desea editar.
+  - Buscar - Busca los registros que coincidan con el criterio de búsqueda especificado (numero trabajador). Se habilita la opción "Buscar siguiente" en caso de que existan más de un registro que coincida con el valor proporcionado.
   - Mostrar todos - Muestra un listado de todos los registros de trabajadores almacenados.
   - Generar nómina - Muestra un listado de los registros almacenados con el cálculo del sueldo percibido en forma de sencillos recibos de nómina.
 
-- AYUDA :
-  - Mas info: Muestra un cuadro de diálogo con información referente al desarrollo.
+- **AYUDA** :
+  - Mas info: Muestra un cuadro de diálogo con información referente a la app.
 
-### Que falta por hacer ? 😱 
-
-- **Implementar un login:** Para que el administrador del sistema acceda a traves de una contraseña maestra, que le permita hacer todos los cambios. Esta contraseña no debe de ser almacenada en el sistema, se debe de almacenar el valor de aplicar la funcion hash sha256 a la contrasena. Por ejemplo:
-si la contrasena es “password”, no debemos almacenar la cadena “password”, debemos almacenar el valor 6b3a55e0261b0304143f805a24924d0c1c44524821305f31d9277843b8a10f4e, que es el resultado de la aplicación de función sha256(password), asumiendo que el argumento es la cadena sin comillas.
+### Que falta por hacer ? 😱
 
 - **Consultar los cheques expedidos anteriormente a un trabajador en específico:** 
 
-- **Agregar informacion extra a los trabajadores dependiendo de su puesto**
 
 - **Crear cheque de un trabajador en especifico despues de buscarlo**
+
+---
+⌨️ con ❤️ por [Victor Gallegos](https://github.com/VictorDeGallegos)🧑🏻  y  [Carlos Cruz](https://github.com/CarlosCruzRangel)🧑🏼

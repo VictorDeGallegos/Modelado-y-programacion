@@ -8,9 +8,14 @@ import java.security.NoSuchAlgorithmException;
 import javax.swing.JOptionPane;
 
 /**
+ * Tarea 0
+ * 
+ * @author Gallegos Mota Victor Hugo, Carlos Cruz Rangel
  *
- * @author hp
+ *         Esta es la interfaz (GUI) que será mostrara en pantalla para el login
+ *         de acceso
  */
+
 public class FormLogin extends javax.swing.JFrame {
 
   /**
@@ -18,6 +23,7 @@ public class FormLogin extends javax.swing.JFrame {
    */
   public FormLogin() {
     initComponents();
+    setTitle("Login");
   }
 
   /**
@@ -127,7 +133,7 @@ public class FormLogin extends javax.swing.JFrame {
     } catch (NoSuchAlgorithmException e) {
       e.printStackTrace();
     }
-    System.out.println("Contraseña encriptada:" + generatedPassword);
+    System.out.println("Contraseña encriptada: " + generatedPassword);
 
     String Pass = new String(Password.getPassword());
 
