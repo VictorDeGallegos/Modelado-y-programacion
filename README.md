@@ -46,7 +46,6 @@ La Interfaz principal cuenta con 3 menus:
 
 - **Consultar los cheques expedidos anteriormente a un trabajador en específico:** 
 
-- **Agregar informacion extra a los trabajadores dependiendo de su puesto**
 
 - **Crear cheque de un trabajador en especifico despues de buscarlo**
 

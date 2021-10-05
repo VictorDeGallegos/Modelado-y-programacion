@@ -69,6 +69,13 @@ public class Nomina extends javax.swing.JFrame {
     jTextFieldHorarioAyudante.setVisible(false);
     abrirArchivo();
 
+    // Administrativo
+    jLabelLugarTrabajoAdmi.setVisible(false);
+    jTextFieldLugarTrabajoAdmi.setVisible(false);
+    jLabelPuestoAdmi.setVisible(false);
+    jTextFieldPuestoAdmi.setVisible(false);
+    jLabelHorarioAdmi.setVisible(false);
+    jTextFieldHorarioAdmi.setVisible(false);
   }
 
   /**
@@ -121,6 +128,13 @@ public class Nomina extends javax.swing.JFrame {
     jComboBoxNivelAyudante = new javax.swing.JComboBox<>();
     jLabelHorarioClaseAyudante = new javax.swing.JLabel();
     jTextFieldHorarioAyudante = new javax.swing.JTextField();
+    jPanelAdministrativo = new javax.swing.JPanel();
+    jLabelLugarTrabajoAdmi = new javax.swing.JLabel();
+    jLabelPuestoAdmi = new javax.swing.JLabel();
+    jTextFieldPuestoAdmi = new javax.swing.JTextField();
+    jLabelHorarioAdmi = new javax.swing.JLabel();
+    jTextFieldHorarioAdmi = new javax.swing.JTextField();
+    jTextFieldLugarTrabajoAdmi = new javax.swing.JTextField();
     jTextFieldPorcentajeCreditos = new javax.swing.JTextField();
     jLabelPasanteoTitulado = new javax.swing.JLabel();
     jComboBoxPasanteoTitulado = new javax.swing.JComboBox<>();
@@ -469,6 +483,52 @@ public class Nomina extends javax.swing.JFrame {
                         javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                         javax.swing.GroupLayout.PREFERRED_SIZE))));
 
+    jLabelLugarTrabajoAdmi.setText("Lugar de trabajo:");
+
+    jLabelPuestoAdmi.setText("Puesto:");
+
+    jLabelHorarioAdmi.setText("Horario:");
+    // Panel administrativo
+    javax.swing.GroupLayout jPanelAdministrativoLayout = new javax.swing.GroupLayout(jPanelAdministrativo);
+    jPanelAdministrativo.setLayout(jPanelAdministrativoLayout);
+    jPanelAdministrativoLayout
+        .setHorizontalGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAdministrativoLayout.createSequentialGroup().addContainerGap()
+                .addGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanelAdministrativoLayout.createSequentialGroup().addComponent(jLabelLugarTrabajoAdmi)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldLugarTrabajoAdmi))
+                    .addGroup(jPanelAdministrativoLayout.createSequentialGroup()
+                        .addGroup(jPanelAdministrativoLayout
+                            .createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanelAdministrativoLayout.createSequentialGroup().addComponent(jLabelHorarioAdmi)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldHorarioAdmi))
+                            .addGroup(jPanelAdministrativoLayout.createSequentialGroup().addComponent(jLabelPuestoAdmi)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTextFieldPuestoAdmi, javax.swing.GroupLayout.PREFERRED_SIZE, 124,
+                                    javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap()));
+    jPanelAdministrativoLayout
+        .setVerticalGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanelAdministrativoLayout.createSequentialGroup().addContainerGap()
+                .addGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelLugarTrabajoAdmi).addComponent(jTextFieldLugarTrabajoAdmi,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelPuestoAdmi).addComponent(jTextFieldPuestoAdmi,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanelAdministrativoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabelHorarioAdmi).addComponent(jTextFieldHorarioAdmi,
+                        javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)));
+
     jComboBoxPuesto.setModel(new javax.swing.DefaultComboBoxModel<>(
         new String[] { "Investigador", "Profesor", "Ayudante", "Administrativo", "Seleccionar" }));
     jComboBoxPuesto.setSelectedIndex(4);
@@ -486,6 +546,7 @@ public class Nomina extends javax.swing.JFrame {
             jPanelInvestigador.setVisible(true);
             jPanelProfesor.setVisible(false);
             jPanelAyudante.setVisible(false);
+            jPanelAdministrativo.setVisible(false);
             jLabelFacultad.setVisible(true);
             jComboBoxFacultad.setVisible(true);
             jLabelInvestigador.setVisible(true);
@@ -497,6 +558,7 @@ public class Nomina extends javax.swing.JFrame {
           case 1:
             jPanelProfesor.setVisible(true);
             jPanelAyudante.setVisible(false);
+            jPanelAdministrativo.setVisible(false);
             jPanelInvestigador.setVisible(false);
             jLabelFacultadPertenencia.setVisible(true);
             jComboBoxFacultadPertenencia.setVisible(true);
@@ -514,6 +576,7 @@ public class Nomina extends javax.swing.JFrame {
             jPanelAyudante.setVisible(true);
             jPanelInvestigador.setVisible(false);
             jPanelProfesor.setVisible(false);
+            jPanelAdministrativo.setVisible(false);
             jLabelFacultadPertenenciaAyudante.setVisible(true);
             jComboBoxFacultadPertenenciaAyudante.setVisible(true);
             jLabelPorcentajeCreditos.setVisible(true);
@@ -529,10 +592,16 @@ public class Nomina extends javax.swing.JFrame {
             break;
 
           case 3:
-
+            jPanelAdministrativo.setVisible(true);
             jPanelInvestigador.setVisible(false);
             jPanelProfesor.setVisible(false);
             jPanelAyudante.setVisible(false);
+            jLabelLugarTrabajoAdmi.setVisible(true);
+            jTextFieldLugarTrabajoAdmi.setVisible(true);
+            jLabelPuestoAdmi.setVisible(true);
+            jTextFieldPuestoAdmi.setVisible(true);
+            jLabelHorarioAdmi.setVisible(true);
+            jTextFieldHorarioAdmi.setVisible(true);
             break;
 
           case 4:
@@ -540,6 +609,7 @@ public class Nomina extends javax.swing.JFrame {
             jPanelInvestigador.setVisible(false);
             jPanelProfesor.setVisible(false);
             jPanelAyudante.setVisible(false);
+            jPanelAdministrativo.setVisible(false);
             break;
         }
       }
@@ -563,6 +633,9 @@ public class Nomina extends javax.swing.JFrame {
 
                     .addComponent(jTextFieldApellidopaterno, javax.swing.GroupLayout.PREFERRED_SIZE, 200,
                         javax.swing.GroupLayout.PREFERRED_SIZE)
+
+                    .addComponent(jPanelAdministrativo, javax.swing.GroupLayout.DEFAULT_SIZE,
+                        javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 
                     .addComponent(jPanelInvestigador, javax.swing.GroupLayout.PREFERRED_SIZE,
                         javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -683,7 +756,10 @@ public class Nomina extends javax.swing.JFrame {
                 javax.swing.GroupLayout.PREFERRED_SIZE)
             .addComponent(jPanelAyudante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE,
                 javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addGap(12, 12, 12).addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+            .addComponent(jPanelAdministrativo, javax.swing.GroupLayout.PREFERRED_SIZE,
+                javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED).addGap(12, 12, 12)
+            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
             .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 
                 .addComponent(jButtonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 42,
@@ -1192,10 +1268,12 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JLabel jLabelFacultad;
   private javax.swing.JLabel jLabelFacultadPertenencia;
   private javax.swing.JLabel jLabelFacultadPertenenciaAyudante;
+  private javax.swing.JLabel jLabelHorarioAdmi;
   private javax.swing.JLabel jLabelAntiguedad;
   private javax.swing.JLabel jLabelPasanteoTitulado;
   private javax.swing.JLabel jLabelPorcentajeCreditos;
   private javax.swing.JLabel jLabelPuesto;
+  private javax.swing.JLabel jLabelPuestoAdmi;
   private javax.swing.JLabel jLabelSNI;
   private javax.swing.JMenuItem jMenuItemAltas;
   private javax.swing.JMenuItem jMenuItemBajas;
@@ -1218,20 +1296,25 @@ public class Nomina extends javax.swing.JFrame {
   private javax.swing.JLabel jLabelHorarioClaseAyudante;
   private javax.swing.JLabel jLabelTitulo;
   private javax.swing.JLabel jLabelInvestigador;
+  private javax.swing.JLabel jLabelLugarTrabajoAdmi;
+  private javax.swing.JPanel jPanelAdministrativo;
   private javax.swing.JPanel jPanelAyudante;
   private javax.swing.JPanel jPanelInvestigador;
   private javax.swing.JPanel jPanelProfesor;
 
   private javax.swing.JTextField jTextFieldCURP;
   private javax.swing.JTextField jTextFieldPorcentajeCreditos;
+  private javax.swing.JTextField jTextFieldPuestoAdmi;
   private javax.swing.JTextField jTextFieldClaseImpartida;
   private javax.swing.JTextField jTextFieldClaseImpartidaAyudante;
   private javax.swing.JTextField jTextFieldSNI;
   private javax.swing.JTextField jTextFieldSueldoD;
   private javax.swing.JTextField jTextFieldSueldoTotal;
   private javax.swing.JTextField jTextFieldEmail;
+  private javax.swing.JTextField jTextFieldHorarioAdmi;
   private javax.swing.JTextField jTextFieldHorarioAyudante;
   private javax.swing.JTextField jTextFieldHorarioClase;
+  private javax.swing.JTextField jTextFieldLugarTrabajoAdmi;
   private javax.swing.JTextField jTextFieldAntiguedad;
   private javax.swing.JTextField jTextFieldTitulo;
   private javax.swing.JMenuBar menuBar;
