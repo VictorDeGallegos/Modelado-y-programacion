@@ -6,8 +6,8 @@ import java.io.Serializable;
  * @author Gallegos Mota Victor Hugo, Carlos Cruz Rangel
  *
  *         En esta clase se especifican los campos que se utilizarán para la
- *         creación de la nómina del personal. Estos son los datos que serán
- *         requeridos en pantalla para que el usuario los ingrese, excepto
+ *         creación de la nómina del personal. Estos son los datos generales que
+ *         serán requeridos en pantalla para que el usuario los ingrese, excepto
  *         sueldototal que será calculado de forma automática, sin intervención
  *         del Usuario y también será mostrado en pantalla.
  *
