@@ -231,12 +231,12 @@ public class Empleado implements Serializable {
    *
    * @param email - recibe el email del empleado tecleado por el usuario
    */
-  public void setEmail(String nombre) {
+  public void setEmail(String email) {
     this.email = email;
   }
 
   /**
-   * Devuelve el valor almacenado en el campo nombre
+   * Devuelve el valor almacenado en el campo email
    *
    * @return
    */
