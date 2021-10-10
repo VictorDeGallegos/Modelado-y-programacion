@@ -6,8 +6,8 @@ import java.io.Serializable;
  * @author Gallegos Mota Victor Hugo, Carlos Cruz Rangel
  *
  *         En esta clase se especifican los campos que se utilizarán para la
- *         creación de la nómina del personal. Estos son los datos que serán
- *         requeridos en pantalla para que el usuario los ingrese, excepto
+ *         creación de la nómina del personal. Estos son los datos generales que
+ *         serán requeridos en pantalla para que el usuario los ingrese, excepto
  *         sueldototal que será calculado de forma automática, sin intervención
  *         del Usuario y también será mostrado en pantalla.
  *
@@ -231,12 +231,12 @@ public class Empleado implements Serializable {
    *
    * @param email - recibe el email del empleado tecleado por el usuario
    */
-  public void setEmail(String nombre) {
+  public void setEmail(String email) {
     this.email = email;
   }
 
   /**
-   * Devuelve el valor almacenado en el campo nombre
+   * Devuelve el valor almacenado en el campo email
    *
    * @return
    */

@@ -102,7 +102,7 @@ public class Registros implements Serializable {
     /**
      * Busca en la lista el objeto Empleado que tiene el número de empleado a
      * eliminar. Remueve el elemento de la lista Devuelve true si encontró y eliminó
-     * el elemento Devuelve false si no eliminóel elemento
+     * el elemento Devuelve false si no eliminó el elemento
      */
     for (int i = 0; i < regemp.length; i++)
       if (regemp[i].getNumEmp() == numemp) {
