@@ -33,7 +33,7 @@ La Interfaz principal cuenta con 3 menus:
 
 - **Registro** :
   - Dar de alta - Permite dar de alta o registrar a un nuevo trabajador y tener un nuevo registro (con toda la info que todos los trabajadores deben registrar)
-  - Dar de baja - Permite dar de baja un trabajador y asi eliminar un archivo existente.
+  - Dar de baja - Permite dar de baja un trabajador.
   - Cambios/Modificaciones - Permite editar o modificar un archivo existente ingresando el (numero de trabajador) que se desea editar.
   - Buscar - Busca los registros que coincidan con el criterio de búsqueda especificado (numero trabajador). Se habilita la opción "Buscar siguiente" en caso de que existan más de un registro que coincida con el valor proporcionado.
   - Mostrar todos - Muestra un listado de todos los registros de trabajadores almacenados.
