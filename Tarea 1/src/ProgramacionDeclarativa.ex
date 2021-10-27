@@ -1,5 +1,6 @@
 defmodule ProgramacionDeclarativa do
     @moduledoc """
+    Autor: Victor Hugo Gallegos Mota y Carlos Cruz Rangel
     Programacion declarativa para obtener:
      Maximo comun divisor
 	   Diferencia Simetrica
