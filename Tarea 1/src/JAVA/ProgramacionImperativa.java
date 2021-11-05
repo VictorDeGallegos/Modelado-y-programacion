@@ -1,3 +1,5 @@
+package JAVA;
+
 /**
  * <h1>Programacion Imperativa!</h1> El programa ProgramacionImperativa
  * implementa 2 metodos de ordenacion y 1 metodo de busqueda en un conjunto de
@@ -10,14 +12,12 @@
 public class ProgramacionImperativa {
 
   /**
-   * @param arr[]
-   * @param izquierda
-   * @param centro
-   * @param derecha
+   * @param arr[]     Mezclamos dos submatrices de arr[].
+   * @param izquierda El primer subarreglo es arr[izquierda..centro]
+   * @param centro    Centro del arreglo
+   * @param derechaEl segundo es arr[centro+1..derecha]
    */
-  // Mezclamos dos submatrices de arr[].
-  // El primer subarreglo es arr[izquierda..centro]
-  // El segundo es arr[centro+1..derecha]
+
   void merge(int arr[], int izquierda, int centro, int derecha) {
     // Encontramos los tamaños de dos submatrices para fusionar
     int n1 = centro - izquierda + 1;
@@ -67,12 +67,13 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param arr[]
-   * @param izquierda
-   * @param derecha
+   * Funcion Principal para ordenar el arreglo usando mergeSort()
+   * 
+   * @param arr[]     Arreglo
+   * @param izquierda Lado izquierdo del arreglo
+   * @param derecha   Lado derecho del arreglo
    */
-  // Función principal que ordena arr[izquierda..derecha] usando
-  // mergeSort()
+
   void mergeSort(int arr[], int izquierda, int derecha) {
     if (izquierda < derecha) {
       // Encontramos el centro
@@ -88,9 +89,10 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param arr[]
+   * Una función de utilidad para imprimir una matriz de tamaño n
+   * 
+   * @param arr[] Arreglo
    */
-  /* Una función de utilidad para imprimir una matriz de tamaño n */
   static void printArrayMerge(int arr[]) {
     for (int i = 0; i < arr.length; ++i) {
       System.out.print(arr[i] + " ");
@@ -98,7 +100,7 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param arr[]
+   * @param arr[] Arreglo
    */
   public void heapSort(int arr[]) {
     int temp;
@@ -119,9 +121,9 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param arr[]
-   * @param n
-   * @param i
+   * @param arr[] arreglo
+   * @param n     tamaño n de la matriz
+   * @param i     indice
    */
   void heapify(int arr[], int n, int i) {
     int MAX = i; // Inicializar más grande como raíz
@@ -149,6 +151,8 @@ public class ProgramacionImperativa {
   }
 
   /**
+   * Una función de utilidad para imprimir una matriz de tamaño x
+   * 
    * @param arr[]
    */
   static void printArrayHeap(int arr[]) // printArrayHeap
@@ -159,16 +163,15 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param arr[]
-   * @param izquierda
-   * @param derecha
-   * @param x
-   * @return int
+   * Implementación Java de búsqueda binaria recursiva
+   * 
+   * @param arr[]     Arreglo
+   * @param izquierda Devuelve el índice de x si está presente en arr[izquierda..
+   * @param derecha   derecha]
+   * @param x         Indice de x
+   * @return int -1
    */
 
-  // Implementación Java de búsqueda binaria recursiva
-  // Devuelve el índice de x si está presente en arr[izquierda..
-  // derecha], else return -1
   int binarySearch(int arr[], int izquierda, int derecha, int x) {
     if (derecha >= izquierda) {
       int mitad = izquierda + (derecha - izquierda) / 2;
@@ -191,9 +194,10 @@ public class ProgramacionImperativa {
   }
 
   /**
-   * @param args[]
+   * Metodo principal para ejecutar el programa
+   * 
+   * @param args[] Arreglo para hacer demostracion
    */
-  // Metodo principal para ejecutar el programa
   public static void main(String args[]) {
     int arr[] = { 6, 5, 3, 1, 8, 7, 2, 4 };
 
