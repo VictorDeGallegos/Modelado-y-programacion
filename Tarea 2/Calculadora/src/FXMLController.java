@@ -182,7 +182,7 @@ public class FXMLController implements Initializable {
 
   @FXML
   private void onActionRaiz(ActionEvent event) {
-    aux += "sqrt ";
+    aux += "sqr ";
     operacion += "r";
     label.setText(aux);
   }

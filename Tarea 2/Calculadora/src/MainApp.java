@@ -6,7 +6,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * Clase hecha para manejar correctamente la interfaz
+ * Clase para manejar la interfaz grafica de la calculadora
  * 
  * @author Gallegos Mota Victor Hugo y Carlos Cruz Rangel
  **/
